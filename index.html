@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GreiP</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet"> 
+	<link rel="icon" href="images/icon.png">
+</head>
+<body>
+
+	<div class="container">
+		<header><span class="greip" id="rainbowText">GreiP</span></header>
+		<h class="name"><span class="small">Nobody from nowhere.</span></h>
+		<p class="tupa">
+			telegram - <a href="https://t.me/sab010/">@sabo1o<br></a>
+			mail - <a href="mailto:pangreip@gmail.com">pangreip@gmail.com</a>
+		</p>
+	</div>
+
+	<script type="text/javascript">
+	var speed=50;
+	if(document.all||document.getElementById){var storetext=document.getElementById?document.getElementById("rainbowText"):document.all.rainbowText;}
+	var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0"),r=1,g=1,b=1,seq=1;
+	function changetext(){rainbow="#"+hex[r]+hex[g]+hex[b];storetext.style.color=rainbow;}
+	function change(){if(seq==6){b--;if(b==0)seq=1}if(seq==5){r++;if(r==12)seq=6}if(seq==4){g--;if(g==0)seq=5}if(seq==3){b++;if(b==12)seq=4}if(seq==2){r--;if(r==0)seq=3}if(seq==1){g++;if(g==12)seq=2}changetext()}
+	function starteffect(){if(document.all||document.getElementById){flash=setInterval("change()",speed)}}
+	starteffect();
+	</script>
+</body>
+</html>
