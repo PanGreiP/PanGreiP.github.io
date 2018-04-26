@@ -1,0 +1,35 @@
+html{
+	font-family: 'Source Code Pro', monospace;
+	font-size: 10px;
+	text-align:center;
+	background-color: #00121a;
+}
+body{
+	margin: 50px;
+	margin-top: 5px;
+}
+.container{
+	display: grid;
+	height: 10%;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 5px;
+}
+.header{
+	grid-column: 1 / -1;
+	grid-row: 1;
+}
+.terminal_head{
+	grid-column: 2;
+	grid-row: 2 / 3;
+}
+.terminal_body{
+	grid-column: 2;
+	grid-row: 3;
+}
+.terminal{
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+	height: 100%;
+	width: 100%;
+}
